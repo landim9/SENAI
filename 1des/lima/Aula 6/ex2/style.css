@@ -1,0 +1,10 @@
+table.lista1 {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+table.lista1 tr{
+padding: .5em 0;
+border-bottom: 1px solid #CCC;
+}
