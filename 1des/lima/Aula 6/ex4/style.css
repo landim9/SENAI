@@ -9,42 +9,21 @@ body{
 }
 
 .container{
-    display: block;
-    flex-direction:;
-    justify-content: block;
-    align-items: center;
-    height: 80vh;
+    display:flex;
+    height: 100vh;
 }
 
 .red{
-    padding: 100px;
+    width: 200vh;
     background-color: red;
 }
 
 .green{
-    padding: 100px;
-    background-color: rgb(0, 255, 51);
+    width: 200vh;
+    background-color: rgb(0, 255, 0);
 }
 
 .blue{
-    padding: 100px;
+    width: 200vh;
     background-color: blue;
-}
-
-.header{
-    background-color: red;
-    height: 200px;
-    width: 200px;
-}
-
-.main{
-    background-color: green;
-    height: 200px;
-    width: 200px;
-}
-
-.footer{
-    background-color: blue;
-    height: 200px;
-    width: 200px;
 }
