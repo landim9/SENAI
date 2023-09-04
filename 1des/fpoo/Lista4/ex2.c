@@ -1,49 +1,78 @@
 #include <stdio.h>
+#include <locale.h>
 
 int main(){
-	char times[5][20];
-	int pontos[5];
-	int vitoria[5], empate[5], x, y, z, i, pontosDoCampeao, pontosDoRebaixado,rebaixado, campeao;
+	setlocale(LC_ALL,"");
+	char time[20][5], temp2[20];
+	int vitorias[20], empates[20], totalPontos[20], temp, i;
 	
-	pontosDoCampeao = 0;
-	pontosDoRebaixado = 1000;
+	for(i = 1; i <= 5; i++){
+		printf("\nNome do time: ");
+		scanf("%s", &time[i]);
+		time[i] + i;
+		
+		printf("Vitórias do time %s: ", time[i]);
+		scanf("%d", &vitorias[i]);
+		vitorias[i] + i;
+		
+		printf("Empates do time %s: ", time[i]);
+		scanf("%d", &empates[i]);
+		empates[i] + i;
+	}
 	
-	for(i = 0; i < 5; i++){
-	printf("Digite o nome do %d time:", i + 1);
-	scanf("%s",&times[5]);
-	if(pontosDoCampeao < pontos[i]){
-			pontosDoCampeao = pontos[i];
-			campeao = i;
+	for(i = 1; i <= 5; i++){
+		vitorias[i] = vitorias[i] * 3;
+		
+		
+		totalPontos[i] = vitorias[i] + empates[i];
+		vitorias[i] + i;
+		empates[i] + i;
+		totalPontos[i] + i;
+		
+	}
+	
+	for(i = 1; i <= 5; i++){
+		if(totalPontos[1] < totalPontos[2]){
+			temp2 = time[20][1];
+			time[20][1] = time[20][2];
+			time[20][2] = temp2;
+			
+			temp = totalPontos[1];
+			totalPontos[1] = totalPontos[2];
+			totalPontos[2] = temp;
 		}
-		if(pontosDoRebaixado > pontos[i]){
-			rebaixado = i;
-			pontosDoRebaixado = pontos[i];
+		if(totalPontos[2] < totalPontos[3]){
+			temp2 = time[20][2];
+			time[20][2] = time[20][3];
+			time[20][3] = temp2;
+			
+			temp = totalPontos[2];
+			totalPontos[2] = totalPontos[3];
+			totalPontos[3] = temp;
+		}
+		if(totalPontos[3] < totalPontos[4]){
+			temp2 = time[20][3];
+			time[20][3] = time[20][4];
+			time[20][4] = temp2;
+			
+			temp = totalPontos[3];
+			totalPontos[3] = totalPontos[4];
+			totalPontos[4] = temp;
+		}
+		if(totalPontos[4] < totalPontos[5]){
+			temp2 = time[20][4];
+			time[20][4] = time[20][5];
+			time[20][5] = temp2;
+			
+			temp = totalPontos[4];
+			totalPontos[4] = totalPontos[5];
+			totalPontos[5] = temp;
 		}
 	}
-	printf("===========================================\n");
-	for(i = 0; i < 5; i++){	
-	
-	printf("Digite as vitorias do %d time:", i + 1);
-	scanf("%d",&vitoria[5]);
+	printf("\n");
+	for(i = 1; i <= 5; i++){
+		printf("%s\t%d\t%d\t%d\n", time[i], totalPontos[i], vitorias[i], empates[i]);
 	}
-	printf("===========================================\n");
-	for(i = 0; i < 5; i++){
-	
-	printf("Digite os empates do %d time:", i + 1);
-	scanf("%d",&empate[5]);
-	}
-	printf("===========================================\n");
-	x = vitoria[5] * 3;
-	y = empate[5] * 1;
-	pontos[5] = x + y;
-
-	for(i = 0; i < 5; i++){
-		printf("%s \n", times[5]);
-	}
-	printf("no time campeão é %s\n", times[campeao]);
-	printf("O time rebaixado é %s\n", times[rebaixado]);
-	printf("Pontos no campeonato: %d \n",z);	
 	
 	return 0;
-
 }

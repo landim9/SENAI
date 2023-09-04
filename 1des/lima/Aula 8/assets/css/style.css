@@ -1,0 +1,73 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --corprincipal: rgb(212, 197, 197);
+}
+
+body {
+    background-color: rgb(236, 213, 186);
+}
+
+
+header {
+    height: 20vh;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+nav {
+    background-color: var(--corprincipal);
+    display: flex;
+
+}
+
+.sub {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(170, 158, 158);
+    height: 50px;
+    gap: 10px;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+}
+
+
+.busca input {
+    height: 40px;
+    border-radius: 20px;
+}
+
+.busca img {
+    transform: translateX(-33px);
+    width: 20px;
+    height: 20px;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 800px;
+}
+
+.cadastro img {
+    height: 50px;
+    width: 50px;
+}
+
+.tabela {
+    width: 60px;
+    border-radius: 10px;
+    border: 1px solid black;
+    border-color: rgb(65, 64, 63);
+}
