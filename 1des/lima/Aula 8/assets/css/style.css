@@ -67,7 +67,23 @@ nav {
 
 .tabela {
     width: 60px;
-    border-radius: 10px;
+    border-radius: 2px;
     border: 1px solid black;
     border-color: rgb(65, 64, 63);
+}
+
+.grade {
+    justify-content: right;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.item {
+    width: 150px;
+    border: 1px solid black;
+}
+
+.grade img {
+    width: 150px;
+    height: 150px;
 }
