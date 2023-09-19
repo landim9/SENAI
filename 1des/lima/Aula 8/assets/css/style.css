@@ -4,7 +4,7 @@
 }
 
 :root {
-    --corprincipal: rgb(211, 211, 211);
+    --corprincipal: rgb(0, 0, 0);
 }
 
 body {
@@ -17,12 +17,29 @@ header {
 }
 
 .logo {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 30px;
+    height: 50vh;
+    width: 50vw;
 }
 
+header p{
+    color: aliceblue;
+}
+.leftbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.rightbar{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
 .logo img {
     height: 30px;
     width: 30px;
@@ -38,15 +55,6 @@ nav {
     align-items: center;
     height: 10vh;
 
-}
-
-.sub {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(170, 158, 158);
-    height: 50px;
-    gap: 10px;
 }
 
 .busca {
@@ -93,9 +101,9 @@ nav {
 }
 
 .grade {
-    justify-content: right;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px 200px;
     row-gap: 20px;
 }
 
@@ -128,4 +136,94 @@ nav {
 .item:hover {
 
     transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.safety{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    background-color: ;
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 55vh;
+    width: 40vw;
+}
+
+.box .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: ;
+    color: white;
+    margin: 40px;
+}
+
+.box .right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.rightbar p{
+    margin: 40px;
+}
+
+.leftbar p{
+    margin: 40px;
+}
+
+.suport{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.FAQ {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 87.5vh;
+}
+
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+.faqQuestionContainer {
+    margin-bottom: 5vh;
+    max-width: 1000px;
+    min-width: 700px;
+    gap: 50px;
+
+}
+
+.FaqMain{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+
+}
+
+.FaqBody{
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
 }

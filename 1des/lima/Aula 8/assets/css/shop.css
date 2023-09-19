@@ -54,7 +54,6 @@ nav {
     align-items: center;
 }
 
-
 .busca input {
     height: 40px;
     border-radius: 20px;
@@ -119,13 +118,13 @@ nav {
 
 }
 
-.item .compre{
+.item .compre {
     height: 30px;
     width: 70px;
     justify-content: right;
 }
 
-.item:hover{
+.item:hover {
 
     transform: scale3d(1.1, 1.1, 1.1);
 }
