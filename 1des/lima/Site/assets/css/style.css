@@ -25,9 +25,10 @@ header {
     width: 50vw;
 }
 
-header p{
+header p {
     color: aliceblue;
 }
+
 .leftbar {
     display: flex;
     justify-content: left;
@@ -43,12 +44,13 @@ header p{
     cursor: pointer;
 }
 
-.rightbar{
+.rightbar {
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 20px;
 }
+
 .logo img {
     height: 40px;
     width: 40px;
@@ -123,8 +125,8 @@ nav {
 }
 
 .grade img {
-    width: 330px;
-    height: 330px;
+    width: 330vw;
+    height: 330vh;
 }
 
 .item p {
@@ -147,19 +149,20 @@ nav {
     transform: scale3d(1.1, 1.1, 1.1);
 }
 
-.safety{
+.safety {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.box{
+
+.box {
     border: 2px solid white;
     border-radius: 20px;
     height: 55vh;
-    width: 40vw;
+    width: 55vw;
 }
 
-.box .left{
+.box .left {
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -168,22 +171,22 @@ nav {
     margin: 40px;
 }
 
-.box .right{
+.box .right {
     display: flex;
     justify-content: right;
     align-items: center;
 
 }
 
-.rightbar p{
+.rightbar p {
     margin: 40px;
 }
 
-.leftbar p{
+.leftbar p {
     margin: 40px;
 }
 
-.suport{
+.suport {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -191,7 +194,7 @@ nav {
     gap: 50px;
 }
 
-.FAQ{
+.FAQ {
     color: var(--branco);
     display: flex;
     justify-content: center;
@@ -207,4 +210,15 @@ nav {
 .FaqQuestionContainer p {
     justify-content: center;
     align-items: center;
+}
+
+.preco {
+    background-color: orange;
+    border-bottom-right-radius:20px ;
+    height: 20px;
+    width: 20px;
+
+
+
+
 }
