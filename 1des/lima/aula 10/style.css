@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+    background-color: rgb(104, 104, 104);
+}
+
+fieldset{
+    height: 150px;
+    border-radius:10px ;
+
+}
+
+input{
+    border-radius: 20px;
+    height:40px ;
+}
+
+.butao{
+    border-radius: 0%;
+    width: 20vw;
+}
