@@ -21,8 +21,8 @@ function distancia(){
 function reajuste(){
 
     let ValorA = (document.getElementById('nome').value)
-    let ValorB = Number(document.getElementById('Salario').value)
-    let ValorC = Number(document.getElementById('Indice').value)
+    let ValorB = Number(document.getElementById('salario').value)
+    let ValorC = Number(document.getElementById('indice').value)
     let Resultfinal = ValorB + (ValorB * ValorC / 100)
 
     document.querySelector('#reajust').innerHTML = `teve seu salario reajustado e ficou: ${Resultfinal}`
