@@ -1,0 +1,78 @@
+body {
+    background: #eee;
+}
+
+.card {
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid black;
+    background: #fff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.model {
+    display: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 10vw;
+}
+
+input[type="submit"] {
+    height: 40px;
+    width: 10vw;
+
+
+}
+
+.calculo {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.card {
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #8A4FFF;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+/* .card {
+    margin: auto;
+    width: 30%;
+    min-width: 260px;
+    max-height: 90%;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease-in-out;
+    color: black;
+} */
+
+.model {
+    display: none;
+}

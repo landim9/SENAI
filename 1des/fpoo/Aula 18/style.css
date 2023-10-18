@@ -1,0 +1,98 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"] {
+    height: 40px;
+    width: 10vw;
+
+
+}
+
+input[type="submit"]:hover {
+    background-color: #8A4FFF;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #818080, #525252);
+    height: 15vh;
+}
+
+input[type="text"],
+input[type="number"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 10vw;
+
+}
+
+.barras {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(20px);
+    gap: 5px;
+}
+
+body {
+    background: linear-gradient(to right, #818080, #525252);
+}
+
+.navbar h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#8A4FFF, #FFFFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-grid {
+    border: 1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #8A4FFF;
+    width: 250px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.card {
+    margin: auto;
+    width: 30%;
+    min-width: 260px;
+    max-height: 90%;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    color: black;
+}
+
+.model {
+    display: none;
+}

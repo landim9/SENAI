@@ -33,7 +33,17 @@ class payment {
 
 }
 
-const pgto1 = new payment("João", 2689)
-console.log(pgto1)
+
+const nameInput = document.getElementById('name')
+const salarioInput = document.getElementById('salario')
 
 
+function enviar() {
+
+const pgto1 = new payment(nameInput.value, salarioInput.value)
+
+
+    console.log(pgto1)
+
+
+}
