@@ -1,6 +1,6 @@
 class Pagamento {
     //Método construtor
-    constructor(nome, salario){
+    constructor(nome, salario) {
         this.nome = nome;
         this.salario = salario;
         this.salarioBase = (this.salario - this.inss()).toFixed(2);
