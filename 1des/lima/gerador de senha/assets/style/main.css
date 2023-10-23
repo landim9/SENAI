@@ -41,7 +41,6 @@ body {
     user-select: none;
     transition: all .4s ease-in-out;
 }
-
 .container {
     display: flex;
     justify-content: space-around;
@@ -84,7 +83,6 @@ body {
 }
 
 #password {
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,25 +96,4 @@ body {
     background-color: white;
     border-radius: 4px;
     width: 300px;
-    margin: 10px;
-}
-
-.ball svg {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-}
-
-.ball {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    border-radius: 100%;
-    background-color: #3c4858;
-}
-
-svg:hover {
-    background-image;
 }
