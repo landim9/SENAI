@@ -23,10 +23,15 @@ body {
 
 .navbar {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    height: 90px;
+    text-align: left;
+    background-color: #ededed;
+    padding: 20px;
+    border-radius: 30px;
+    height: 30px;
+    margin: 15px;
+    width: 25vw;
 }
 
 .navbar nav {
@@ -49,7 +54,7 @@ body {
 .subtext p:hover {
     cursor: pointer;
     transform: scale(1.5px);
-    color: rgb(174, 0, 255);
+    color: rgb(95, 95, 95);
     font-weight: bold;
 }
 
@@ -60,14 +65,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: left;
-    background-color: rgb(142, 142, 142);
-    padding: 20px;
-    border-radius: 30px;
-    height: 30px;
-    margin: 15px;
+    justify-content: center;
 }
 
 main {
@@ -99,12 +97,15 @@ main {
 
 .social {
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     background-color: rgb(255, 255, 255);
-    width: 20vh;
+    width: 30vh;
     padding: 15px;
     gap: 30px;
-    border-radius: 2px;
+    border-radius: 3px;
+    transform: translateX(-20rem);
+    margin-top: 250px;
 }
 
 .social div:hover {
@@ -118,4 +119,8 @@ main {
     letter-spacing: 1px;
     font-weight: bold;
     color: white;
+}
+
+.principal h4 {
+    text-align: left;
 }
