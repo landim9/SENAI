@@ -35,23 +35,23 @@ function generateExpirationDate() {
 
 console.log(generateExpirationDate());
 
-// function cvvGenerator() {
-//     var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-//     var number 
-//     for (var i = 0; i < 3; i++) {
-//       number += numbers[Math.floor(Math.random() * numbers.length)]
-//     }
-//     document.getElementById('cvv').textContent = number;
-// }
-
 function cvvGenerator() {
-    let cvv = '';
-    let characters = '0123456789';
-
-    for (let i = 0; i < 3; i++) {
-        cvv += characters.charAt(Math.floor(Math.random() * characters.length));
+    var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+    var number = '' 
+    for (var i = 0; i < 3; i++) {
+      number += numbers[Math.floor(Math.random() * numbers.length)]
     }
-
-    document.getElementById('cvv').textContent = cvv
+    document.getElementById('cvv').textContent = number;
 }
+
+// function cvvGenerator() {
+//     let cvv = '';
+//     let characters = '0123456789';
+
+//     for (let i = 0; i < 3; i++) {
+//         cvv += characters.charAt(Math.floor(Math.random() * characters.length));
+//     }
+
+//     document.getElementById('cvv').textContent = cvv
+// }
 
