@@ -29,7 +29,7 @@ body {
     background-size: cover;
 }
 
-.navbar {
+.island {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,16 +43,32 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.navbar:hover {
-    width: 25vw;
+.island:hover {
+    width: 20vw;
 }
 
-.navbar nav {
+.island nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     font-size: 10px;
+}
+
+.island {
+    overflow: hidden;
+}
+
+.island:hover p,
+.island:hover .name {
+    opacity: 1;
+    display: block;
+}
+
+
+
+.island p {
+    display: none;
 }
 
 .subtext {
@@ -62,13 +78,7 @@ body {
     justify-content: right;
     align-items: center;
     color: aliceblue;
-    opacity: 0;
-}
-
-.name {
-    margin: 30px;
-    color: aliceblue;
-    display: none;
+    transition: all .6s ease-in-out
 }
 
 .principal:hover .name {
@@ -76,44 +86,20 @@ body {
     display: flex;
 }
 
-@-webkit-keyframes tracking-in-expand-fwd {
-    0% {
-        letter-spacing: -0.5em;
-        -webkit-transform: translateZ(-700px);
-        transform: translateZ(-700px);
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 0.6;
-    }
-
-    100% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        opacity: 1;
-    }
+.subtext:hover {
+    transform: scale(1);
 }
 
-@keyframes tracking-in-expand-fwd {
+@keyframes fadeInUp {
     0% {
-        letter-spacing: -0.5em;
-        -webkit-transform: translateZ(-700px);
-        transform: translateZ(-700px);
         opacity: 0;
+        transform: translateY(-40px) rotateZ(720deg);
     }
-
-    40% {
-        opacity: 0.6;
-    }
-
     100% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
         opacity: 1;
+        transform: translateY(0) rotateZ(0);
     }
 }
-
 
 header {
     display: flex;
@@ -127,17 +113,6 @@ main {
     padding: 5% 0;
     text-align: center;
     min-height: calc(100vh - 90px);
-
-}
-
-.photo {
-    justify-content: left;
-    margin-left: -70rem;
-    border-radius: 100%;
-}
-
-.photo img {
-    border-radius: 100%;
 }
 
 .maintext {
@@ -182,38 +157,11 @@ main {
 }
 
 .social div:hover {
-    -webkit-animation: rotate-center 0.6s ease-in-out both;
-    animation: rotate-center 0.6s ease-in-out both;
     transform: scale(1.5);
 }
 
-@-webkit-keyframes rotate-center {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotate-center {
-    0% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-    }
-
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
-
 @media (max-width: 880px) {
-    .navbar {
+    .island {
         margin-top: 30px;
         width: 50vw;
         transition: 0.5s ease-in-out;
@@ -243,8 +191,52 @@ main {
         width: 20px;
     }
 
-    .navbar:hover {
+    .island:hover {
         width: 90vw;
     }
 
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+    font-family: "Russo One", sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+svg text {
+    animation: stroke 5s infinite alternate;
+    stroke-width: 2;
+    stroke: #365FA0;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(54, 95, 160, 1);
+    }
+
+    80% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(54, 95, 160, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(72, 138, 204, 1);
+        stroke: rgba(54, 95, 160, 0);
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+    }
 }
