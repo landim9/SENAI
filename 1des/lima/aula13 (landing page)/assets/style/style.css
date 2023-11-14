@@ -22,3 +22,8 @@ cart-outline {
     height: 250px;
     color:black ;
 }
+
+footer {
+    display: flex;
+    align-items:center;
+}
