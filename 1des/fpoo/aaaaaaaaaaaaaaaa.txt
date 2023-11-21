@@ -1,0 +1,54 @@
+O que são classes abstratas em nosso desenvolvimento? A grosso modo, é uma classe que possui propriedades e/ou métodos como qualquer outra classe, mas não tem sentido em existir por si só. Ou seja, não faz sentido existir uma instância dessa classe.
+Esta classe serve apenas de base para outras classes que herdarão seu comportamento e propriedades.
+
+Por exemplo, se você estivesse construindo um carro, saberia que o carro tem movimento e que muda de velocidade acelerando e desacelerando. Portanto, todo carro que se preze tem uma velocidade e pode acelerar ou desacelerar até que a velocidade seja zero.
+
+Então poderiamos criar esta classe Carro:
+
+
+var Carro = {
+ 
+    Class :function(){
+ 
+        //Private
+        var velocidade = 0
+ 
+        //Public
+        this.acelerar = function(n){
+            velocidade = velocidade + (n || 1)
+        }
+ 
+        this.frear = function(n){
+            velocidade = velocidade - (n || 1)
+        }
+ 
+        this.velocidade = function(){ return velocidade }
+ 
+    }
+ 
+}
+
+
+Interface é mais suave para programadores Javascript. Lembre-se de que as interfaces não especificam como algo é implementado, apenas o que é implementado, enquanto em Javascript também especifica como é implementado.
+
+
+Então, para criarmos todos os nossos veículos usaríamos a Interface para criarmos a classe abstrata Veiculo e herdaríamos Veiculo em Carro e Moto:
+
+var Veiculo = {
+ 
+    Class :function(velocidade){
+ 
+        Interface.abstract.apply(this, [Veiculo.Class])
+ 
+        this.acelerar = function(n){
+            velocidade = velocidade + (n || 1)
+        }
+ 
+        this.frear = function(n){
+            velocidade = velocidade - (n || 1)
+        }
+ 
+        this.velocidade = function(){ return velocidade }
+ 
+    }
+}
