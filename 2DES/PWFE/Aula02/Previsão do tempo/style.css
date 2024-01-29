@@ -45,4 +45,7 @@ body {
     color: #fff;
 }
 
-img-busca
+.img-busca {
+    width: 30px;
+    height: 30px;
+}
