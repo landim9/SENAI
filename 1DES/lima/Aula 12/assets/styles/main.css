@@ -1,0 +1,155 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dddddd;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background-color: #dddddd;
+    border-bottom: 3px solid black;
+
+    margin: 20px;
+}
+
+
+.info .Dolar span {
+    color: red;
+    padding: 10px;
+}
+
+.info .Euro span {
+    color: rgb(0, 255, 0);
+    padding: 10px;
+}
+
+.info .Pedreira span {
+    color: rgb(0, 242, 255);
+    padding: 10px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.buscas img {
+    width: 20px;
+    transform: translateX(-37px);
+}
+
+.biden img {
+    width: 300px;
+    padding-top: 15px;
+}
+
+.vacina img {
+    width: 300px;
+    padding-top: 15px;
+}
+
+.india img {
+    width: 300px;
+    padding-top: 15px;
+
+}
+
+.buscas input {
+    width: 10vw;
+    height: 4vh;
+    background-color: #999999;
+    border-radius: 15px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 150px;
+    margin-top: 3rem;
+    gap: 20px;
+}
+
+.topics {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    background-color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px
+    inset, rgba(0, 0, 0, 0.1) 0px -6px 20px;
+    padding: 10px;
+    text-align: left;
+    column-gap: 15px;
+}
+
+.biden {
+    display: flex;
+}
+
+.vacina {
+    display: flex;
+}
+
+.india {
+    display: flex;
+}
+
+.text1 , .text2, .text3 {
+    margin-top:21px ;
+    padding: 25px;
+    column-gap: 15px;
+}
+
+.sim {
+    display: flex;
+    flex-direction: column;
+    column-gap: 25px;
+}
+
+.topics h6{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    font-size: 14px;
+    line-height: 1.5em;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.topics p {
+    border-bottom: 2px solid black;
+}
+
+.info .Dolar, .info .Euro, .info .Pedreira {
+    font-weight:bold;
+}
+
+@media (max-width: 1100px) {
+    main{
+        flex-direction: column-reverse;
+        width: fit-content;
+    }
+
+    .topics{
+        display: flex;
+        width: fit-content;
+        height:auto;
+
+    }
+}

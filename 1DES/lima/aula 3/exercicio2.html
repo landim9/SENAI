@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <Fieldset>
+    <B><p>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</p>
+    <form>
+        <p>
+        <label>Login:<input type="text" placeholder=""> </label>
+<br></p><p>
+        <label>Senha:</label><input type="password" placeholder="">
+<br></p><p></p>
+            <label>Status:</label>
+            <select>
+                <option value="1">Ativo</option>
+                <option value="0">Inativo</option>
+            </select>
+<br></p>
+        </legend>
+
+        <label>Tipo 
+            <input type="radio" name="Tipo"value="T">Técnico
+            <input type="radio" name="Tipo"value="P">Professor
+            <input type="radio" name="Tipo"value="A">Aluno
+        </ç> 
+<br>
+        <label>Data Criação</label><input type="text" placeholder="">
+<br>
+        <label>Perfil</label><input type="radio" name="Perfil" value="C">Convidado
+        <input type="radio" name="Perfil" value="A">Administrador
+<br>    
+        <label>Observações:</label>
+        <textarea id="story" name="story" rows="5" cols="33">
+        </textarea>
+<br>
+        <label>Modulos</label>
+        <input  type="checkbox" name="modulos" value="Compras">Compras
+        <input  type="checkbox" name="modulos" value="Bibilioteca">Bibilioteca
+        <input  type="checkbox" name="modulos" value="Acadêmico">Acadêmico
+        <br>
+        <input  type="checkbox" name="modulos" value="Documentação">Documentação
+        <input  type="checkbox" name="modulos" value="Recursos Humanos">Recursos Humanos
+</form>
+<br>
+
+<input type="button" value="Cadastrar" id="cadastrar">
+<input type="button" value="Excluir" id="Excluir">
+</Fieldset>
+</body>
+</html>

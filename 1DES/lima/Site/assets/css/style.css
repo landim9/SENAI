@@ -1,0 +1,223 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+:root {
+    --corprincipal: rgb(0, 0, 0);
+    --branco: #ffffff;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+header {
+    height: 20vh;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+header p {
+    color: aliceblue;
+}
+
+.leftbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.leftbar p {
+    cursor: pointer;
+}
+
+.rightbar p {
+    cursor: pointer;
+}
+
+.rightbar {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: var(--corprincipal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.busca {
+    display: flex;
+    align-items: center;
+}
+
+
+.busca input {
+    height: 40px;
+    border-radius: 20px;
+    transform: translateX(50px);
+}
+
+.busca img {
+    transform: translateX(20px);
+    width: 20px;
+    height: 20px;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: 800px;
+}
+
+.cadastro img {
+    height: 35px;
+    width: 35px;
+}
+
+.tabela {
+    width: 70px;
+    height: 80px;
+    border-radius: 2px;
+    border: 1px solid black;
+    border-color: rgb(245, 245, 245);
+}
+
+.tabela p {
+    justify-content: center;
+    align-items: center;
+}
+
+.grade {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    gap: 200px;
+}
+
+.item {
+    width: 330px;
+    border: 1px solid rgb(255, 46, 158);
+    border-radius: 5px;
+}
+
+.grade img {
+    width: 330px;
+    height: 330px;
+}
+
+.item p {
+    color: aliceblue;
+}
+
+.item button {
+    border-radius: 5px;
+
+}
+
+.item .compre {
+    height: 30px;
+    width: 70px;
+    justify-content: right;
+}
+
+.item:hover {
+
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.safety {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 55vh;
+    width: 55vw;
+}
+
+.box .left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    color: white;
+    margin: 40px;
+}
+
+.box .right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.rightbar p {
+    margin: 40px;
+    font-size: 40px;
+}
+
+.leftbar p {
+    margin: 40px;
+    font-size: 40px;
+}
+
+.suport {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.FAQ {
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FaqContainer {
+    color: var(--branco);
+    justify-content: center;
+    align-items: center;
+}
+
+.FaqQuestionContainer p {
+    justify-content: center;
+    align-items: center;
+}
+
+.preco {
+    background-color: orange;
+    border-bottom-right-radius: 20px;
+    height: 20px;
+    width: 20px;
+
+
+
+
+}

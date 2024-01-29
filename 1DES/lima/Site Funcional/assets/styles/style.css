@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes wipe-in-right {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:wipe:right"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) wipe-in-right both;
+}
+
+.navbar {
+  display: flex;
+  background: linear-gradient(to right, #9115e4, #fc1cb1);
+  padding: 10px 10px;
+  text-align: center;
+  height: 15vh;
+  
+}
+
+
+.subar {
+  background-color: #292929;
+  height: 10vh;
+}
+
+.rightbar {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.menu{
+  display: flex;
+  justify-content: right;
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 100vh;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgb(119, 9, 9);
+    height: 20vh ;
+}
+
+.container{
+    display: flex;
+    height: 60vh;
+}
+.main{
+    display: flex;
+    background-color: brown;
+    width: 100vh;
+}
+.main1{
+    display: flex;
+    background-color: rgb(95, 4, 4);
+    width:300vh ;
+}
+.foot{
+    background-color: rgb(119, 9, 9);
+    height: 20vh ;
+}

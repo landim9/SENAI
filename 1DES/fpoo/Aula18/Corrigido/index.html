@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 class="calculo">Calculo Trabalhista</h1>
+
+    <form id="formPessoa">
+        <input type="text" id="nome" name="nome" placeholder="Digite um nome:" required>
+        <input type="number" id="salario" name="salario" placeholder="Digite um salario:" required>
+        <button type="submit" value="Enviar" class="submit">Calcular</button>
+    </form>
+
+    <div class="cards">
+        <div class="card model">
+            <h1 id="nomeValor">Nome</h1>
+            <h4 id="salarioValor">1000</h4>
+            <h4 id="salarioBase">1000</h4>
+            <h4 id="salarioLiquido">1000</h4>
+            <button onclick="remover(this)" class="delete">Apagar</button>
+        </div>
+    </div>
+
+</body>
+<script src="pessoa.js"></script>
+<script src="viewController.js"></script>
+
+</html>

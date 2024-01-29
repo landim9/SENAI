@@ -1,0 +1,29 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(34, 34, 34);
+    height: 70px;
+}
+
+nav{
+    display: flex;
+    gap: 20px   ;
+    color: white;
+}
+
+cart-outline {
+    height: 250px;
+    color:black ;
+}
+
+footer {
+    display: flex;
+    align-items:center;
+}
