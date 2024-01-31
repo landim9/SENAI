@@ -3,28 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style/style.css">
     <title>Lojinha</title>
 </head>
 <body>
-    <header>
-        <h1>Cadastro de Clientes</h1>
-    </header>
-    <nav>
+    <div class="logo">
         <a href="./index.html">Listar todos</a>
+        <img src="assets/img/logo beth.png">
         <a href="./form.html">Cadastrar</a>
-    </nav>
+    
+    </div>
+        
+    
+    
     <main>
-        <form action="http://localhost:3000/clientes" method="post">
-            <input type="text" name="cpf" placeholder="cpf" required>
-            <input type="text" name="nome" placeholder="nome" required>
-            <input type="text" name="sobrenome" placeholder="sobrenome" required>
-            <input type="date" name="nascimento" placeholder="nascimento" required>
-            <input type="submit" value="Enviar">
-        </form>
+        
+        <div class="cadastro">
+            <form action="http://localhost:3000/clientes" method="post">
+                <div class="cabecario">
+                    <h2>Cadastro</h2>
+                </div>
+                <div class="dados">
+                    <p>Nome</p>
+                    <input type="text" name="nome" placeholder="" required>
+                    <p>Quantidade</p>
+                    <input type="text" name="sobrenome" placeholder="" required>
+                    <p>Produto</p>
+                    <input type="text" name="cpf" placeholder="" required>
+                    <p>Data</p>
+                    <input type="date" name="nascimento" placeholder="" required>
+                    <div class="botao">
+                        <input type="submit" value="Cadastrar"> 
+                    </div>
+                    
+                </div>
+                
+            </form>
+        </div>
+        
     </main>
     <footer>
-        <h2>By eu</h2>
+        <div class="end">
+            <p>R. Anèsia Venturini Zani, 62 - Centro, Jaguariúna - SP, 13820-000</p>
+        </div>
+        <p>© Copyright 2024, Cantina da Beth.</p>
+       
     </footer>
 </body>
 </html>
