@@ -127,6 +127,7 @@ input, textarea{
     margin: 5px 0;
     border: 2px solid ;
     border-radius: 18px;
+    padding: 10px;
 }
 .cadastro {
     display: flex;
@@ -175,7 +176,6 @@ input, textarea{
 
 }
 
-.botao input:hover {
-    transform: scale3d(1.02, 1.04, 1);
-}
+
+
 
