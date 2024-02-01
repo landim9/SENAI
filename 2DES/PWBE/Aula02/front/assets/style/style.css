@@ -50,7 +50,7 @@ a{
 .logo{
     width: 100%;
     padding: 10px 0;
-    background: #e2c834;
+    background: #e2c522;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -59,6 +59,7 @@ a{
  .logo img {
     width: 120px ;
     height: 100px;
+
 
 }
 
@@ -92,11 +93,11 @@ table{
 }
 
 tr:nth-child(even){
-    background: #ffdddd;
+    background: rgb(247, 245, 141);
 }
 
 tr{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid rgb(252, 185, 0);
 }
 
 th, td{
@@ -176,6 +177,18 @@ input, textarea{
 
 }
 
+input:hover {
+    transform:scale3d(1.04, 1.04, 1.04);
+    background-color: white;
+    border: 3px solid rgb(252, 185, 0);
+}
 
-
-
+select {
+    width: 300px;
+    height: 40px;
+    margin: 5px 0;
+    border: 2px solid ;
+    border-radius: 18px;
+    padding: 10px;
+    
+}

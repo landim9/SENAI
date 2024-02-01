@@ -7,28 +7,34 @@
     <title>Lojinha</title>
 </head>
 <body>
-    <header>
-        <h1>Listar todos os clientes</h1>
-    </header>
-    <nav>
+    <div class="logo">
         <a href="./index.html">Listar todos</a>
+        <img src="assets/img/logo beth.png">
         <a href="./form.html">Cadastrar</a>
-    </nav>
+    
+    </div>
     <main>
         <table>
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>CPF</th>
-                    <th>Nome completo</th>
-                    <th>Nascimento</th>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Produto</th>
+                    <th>Valor</th>
                 </tr>
             </thead>
             <tbody id="dados">
             </tbody>
         </table>
     </main>
-    <footer>by FIRMA</footer>
+    <footer>
+        <div class="end">
+            <p>R. Anèsia Venturini Zani, 62 - Centro, Jaguariúna - SP, 13820-000</p>
+        </div>
+        <p>© Copyright 2024, Cantina da Beth.</p>
+       
+    </footer>
 </body>
 <script>
     const dados = document.getElementById('dados');
