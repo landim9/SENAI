@@ -8,7 +8,7 @@ const bodyParser = require("body-parser");
 const con = mysql.createConnection({
     user: 'root',
     host: 'localhost',
-    database: 'lojinha'
+    database: 'Guri'
 });
 
 //Rota de teste
