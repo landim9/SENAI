@@ -1,4 +1,4 @@
-const selector = document.getElementById("selector");
+const selector = document.getElementById("select");
 const value = document.getElementById("valor");
 const date = document.getElementById("data");
 const quantity = document.getElementById("quantidade");
@@ -7,76 +7,79 @@ const total = document.getElementById("total");
 
 selector.addEventListener("change", (event) => {
     const targetValue = event.target.value;
-    
-    switch(targetValue) {
+
+    switch (targetValue) {
         case "null":
             value.value = ""
             break;
-        case "HT":
+        case "Hambúrguer tradicional":
             value.value = "R$34.50"
             break;
-        case "HV":
+        case "Hambúrguer Vegetariana":
             value.value = "R$37.50"
             break;
-        case "HG":
+        case "Hambúrguer Goumert":
             value.value = "R$35.99"
             break;
-        case "HVGN":
+        case "Hambúrguer Vegano":
             value.value = "R$36.90"
             break;
-        case "HB":
+        case "Hambúrguer":
             value.value = "R$27.99"
             break;
-        case "HXT":
+        case "Hamburguer X-TUDO":
             value.value = "R$29.99"
             break;
-        case "BTTP":
+        case "Batata frita Pequena":
             value.value = "R$5.99"
             break;
-        case "BTTM":
-            value.value = "8.99"
+        case "Batata frita Media":
+            value.value = "R$8.99"
             break;
-        case "BTTG":
+        case "Batata frita Grande":
             value.value = "12.99"
             break;
-        case "SL":
+        case "Batata frita Especial":
+            value.value = "R$17.99"
+            break;
+        case "Salada":
             value.value = "R$7.99"
             break;
-        case "CC":
+        case "Coca Cola 2L":
             value.value = "R$9.99"
             break;
-        case "SDV":
+        case "Suco Dell Vale":
             value.value = "R$6.99"
             break;
-        case "FU":
+        case "Fanta Uva":
             value.value = "R$8.99"
             break;
-        case "PSP":
-                value.value = "R$7.99"
-                break;
-        case "SPT":
+        case "Pepsi 2L":
+            value.value = "R$7.99"
+            break;
+        case "Sprite 2L":
             value.value = "R$8.99"
             break;
-        case "XRT":
+        case "Xereta 1,5L":
             value.value = "R$5.99"
             break;
-            case "GRN":
+        case "Guarana Antartica 1,5L":
             value.value = "R$9.99"
             break;
-            case "SCL":
+        case "Suco de laranja":
             value.value = "R$4.99"
-            case "FU":
+        case "Agua":
             value.value = "R$8.99"
             break;
-            case "AG":
+        case "AG":
             value.value = "R$1.99"
             break;
-        default:    
+        default:
             break;
     }
 })
 
 quantity.addEventListener("input", (event) => {
     const targetValue = event.target.value;
-    total.value = value.value * targetValue
+    const value = quantity * targetValue
 })

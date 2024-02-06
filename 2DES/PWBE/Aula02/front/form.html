@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="shortcut icon" href="assets/img/logo beth.png" type="image/x-icon">
     <title>Dos Guri</title>
 </head>
+
 <body>
     <div class="logo">
         <a href="./index.html">Listar todos</a>
         <img src="assets/img/logo beth.png" draggable="false">
         <a href="./form.html">Cadastrar</a>
-    
+
     </div>
     <main>
         <div class="cadastro">
@@ -22,51 +25,57 @@
                 <div class="dados">
                     <p>Nome</p>
                     <input type="text" name="nome" placeholder="" required>
-                    <p>Quantidade</p>
-                    <input type="number" name="sobrenome" placeholder="" required>
                     <p>Produto</p>
-                    <select name="" id="select"  onchange="updatePrice()" required>
+                    <select name="produto" id="select" required>
                         <option class="produto" value="">Produtos</option>
-                        <option value="HT">Hambúrguer tradicional (Hamburguer,queijo,tomate,salada, baicon)</option>
-                        <option value="HV">Hambúrguer Vegetariana (Hamburguer de Soja, queijo, tomate, salada,)</option>
-                        <option value="HG">Hambúrguer Goumert (Pão italiano, Hamburguer, queijo, tomate, salada, Molho Especial)</option>
-                        <option value="HVGN">Hambúrguer Vegano (Hamburguer, queijo vegano, tomate, salada, Molho Especial)</option>
-                        <option value="HB">Hambúrguer  (Hamburguer, queijo vegano, tomate, salada, Molho Especial)</option>
-                        <option value="HTX">Hamburguer X-TUDO</option>
-                        <option value="BTTP">Batata frita Pequena</option>
-                        <option value="BTTM">Batata frita Media</option>
-                        <option value="BTTG">Batata frita Grande</option>
-                        <option value="BTTE">Batata frita Especial (Cheddar, Bacon, Molho)</option>
-                        <option value="SL">Salada</option>
-                        <option value="CC">Coca Cola 2L</option>
-                        <option value="SDV">Suco Dell Vale</option>
-                        <option value="FU">Fanta Uva</option>
-                        <option value="PSP">Pepsi 2L</option>
-                        <option value="SPT">Sprite 2L</option >
-                        <option value="XRT">Xereta 1,5L</option >
-                        <option value="GRN">Guarana Antartica 1,5L</option >
-                        <option value="SCL">Suco de laranja</option>
-                        <option value="AG">Agua</option> >
-                        
-                        </select>
-                        <p>Valor</p>
-        
-                        <input type="text" name="valor" placeholder="" id="valor" required>
+                        <option value="Hambúrguer tradicional">Hambúrguer tradicional (Hamburguer,queijo,tomate,salada,
+                            baicon)</option>
+                        <option value="Hambúrguer Vegetariana">Hambúrguer Vegetariana (Hamburguer de Soja, queijo,
+                            tomate, salada,)</option>
+                        <option value="Hambúrguer Goumert">Hambúrguer Goumert (Pão italiano, Hamburguer, queijo, tomate,
+                            salada, Molho Especial)</option>
+                        <option value="Hambúrguer Vegano">Hambúrguer Vegano (Hamburguer, queijo vegano, tomate, salada,
+                            Molho Especial)</option>
+                        <option value="Hambúrguer">Hambúrguer (Hamburguer, queijo vegano, tomate, salada, Molho
+                            Especial)</option>
+                        <option value="Hamburguer X-TUDO">Hamburguer X-TUDO</option>
+                        <option value="Batata frita Pequena">Batata frita Pequena</option>
+                        <option value="Batata frita Media">Batata frita Media</option>
+                        <option value="Batata frita Grande">Batata frita Grande</option>
+                        <option value="Batata frita Especial">Batata frita Especial (Cheddar, Bacon, Molho)</option>
+                        <option value="Salada">Salada</option>
+                        <option value="Coca Cola 2L">Coca Cola 2L</option>
+                        <option value="Suco Dell Vale">Suco Dell Vale</option>
+                        <option value="Fanta Uva">Fanta Uva</option>
+                        <option value="Pepsi 2L">Pepsi 2L</option>
+                        <option value="Sprite 2L">Sprite 2L</option>
+                        <option value="Xereta 1,5L">Xereta 1,5L</option>
+                        <option value="Guarana Antartica 1,5L">Guarana Antartica 1,5L</option>
+                        <option value="Suco de laranja">Suco de laranja</option>
+                        <option value="Agua">Agua</option>
+                    </select>
+
+                    <p>Quantidade</p>
+                    <input type="number" name="quantidade" placeholder="" required>
+                    <p>Valor</p>
+
+                    <input type="text" name="valor" placeholder="" id="valor" required>
                     <div class="botao">
-                        <input type="submit" value="Cadastrar"> 
+                        <input type="submit" value="Cadastrar">
                     </div>
                 </div>
             </form>
         </div>
-        
+
     </main>
     <footer>
         <div class="end">
             <p>R. Anèsia Venturini Zani, 62 - Centro, Jaguariúna - SP, 13820-000</p>
         </div>
         <p>© Copyright 2024, Hamburgueria do Guri.</p>
-       
+
     </footer>
 </body>
 <script src="main.js"></script>
+
 </html>
