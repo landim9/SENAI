@@ -81,5 +81,4 @@ selector.addEventListener("change", (event) => {
 
 quantity.addEventListener("input", (event) => {
     const targetValue = event.target.value;
-    const value = quantity * targetValue
 })
