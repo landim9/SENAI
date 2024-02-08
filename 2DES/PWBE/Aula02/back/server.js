@@ -22,11 +22,12 @@ const create = (req, res) => {
     let quantidade = req.body.quantidade;
     let produto = req.body.produto;
     let valor = req.body.valor;
-    let query = `INSERT INTO Clientes( nome, quantidade, produto, valor) VALUE`;
-    query += `('${nome}', '${quantidade}', '${produto}', '${valor}');`;
+    let total = req.body.total;
+    let query = `INSERT INTO Clientes( nome, quantidade, produto, valor, total) VALUE`;
+    query += `('${nome}', '${quantidade}', '${produto}', '${valor}', 'R$${total}');`;
     con.query(query,(err, result)=>{
         if(err)
-            res.redirect("http://127.0.0.1:5500/front/erro.html?erro=Provalmente o Cliente já está cadastrado&err="+err.code);
+            res.redirect("http://127.0.0.1:5501/front/erro.html?erro=Provalmente o Cliente já está cadastrado&err="+err.code);
         else
             res.redirect("http://127.0.0.1:5501/front/index.html");
     });
