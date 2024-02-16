@@ -1,70 +1,75 @@
-import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-
-
-// export default function ImagePickerExample(...args: []) {
-// const [image, setImage] = useState(null);
-
-//   const pickImage = async () => {
-//     // No permissions request is necessary for launching the image library
-//     let result = await launchImageLibraryAsync({
-//       mediaTypes: MediaTypeOptions.All,
-//       allowsEditing: true,
-//       aspect: [4, 3],
-//       quality: 1,
-//     });
-
-//     console.log(result);
-
-//     if (!result.canceled) {
-//       setImage(result.assets[0].uri);
-//     }
-//   };
-
-//   return (
-//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-//       <Button title="Pick an image from camera roll" onPress={pickImage} />
-//       {image && <Image source={{ uri: image }} style={{ width: 200, height: 200 }} />}
-//     </View>
-//   );
-// }
-
+import { StyleSheet, Text, View, Image, Linking, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text >aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Text>
-      <p></p>
-      <Text>SENAI 2028</Text>
-      <p></p>
-      <Text>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Text>
-      <p></p>
-      <Image
-        style={styles.logo}
-        source={{
-          uri: 'https://i.gifer.com/9ARp.gif',
-        }}
-      />
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+     <Image source={{uri: 'https://w7.pngwing.com/pngs/320/234/png-transparent-woman-cartoon-businessperson-drawing-woman-people-public-relations-business.png'}} style={styles.logo}/>
+     <br></br>
+     <Text style={styles.textoo}>Gabriella Godoi Avila</Text>
+     <br></br>
+     <br></br>
+     <Text style={styles.subtexto}>Dados Pessoais:</Text>
+     <br></br>
+     <Text style={styles.textoDados}>Idade: 17 anos </Text>
+     <br></br>
+     <br></br>
+     <Text style={styles.subtexto}>Formação: </Text>
+     <br></br>
+     <Text style={styles.textoDados}>Estou no último ano do ensino médio, e cursando Técnico em Desenvolvimento de Sistemas no Senai </Text>
+     <br></br>
+     <br></br>
+     <Text style={styles.contato}>Contato</Text>
+     <Button title="Github" onPress={() => Linking.openURL('https://github.com/avilagabriella')}/>
+
       <StatusBar style="auto" />
     </View>
-  );
+    
+);
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'rgb(150,150,150)',
     alignItems: 'center',
-    justifyContent: 'center',
+    letterSpacing: 5,
   },
-  tinyLogo: {
-  width: 100,
-  height: 100,
-},
-  logo: {
-  width: 166,
-  height: 158,
-},
+  logo:{
+    width: 150,
+    height: 150,
+  },
+   textoo: {
+      color: 'rgb(176,196,222)',
+      fontSize: 50,
+      fontWeight: 'bold',
+      letterSpacing: 5,
+      gap: 50,
+      textAlign: 'center',
+    },
+    subtexto: {
+      color: 'rgb(100,149,237)',
+      fontSize: 30,
+      fontWeight: 'bold',
+      letterSpacing: 5,
+      gap: 50,
+      textAlign: 'center',
+    },
+    textoDados: {
+      color: 'white',
+      fontSize: 20,
+      fontWeight: 'bold',
+      letterSpacing: 5,
+    },
+    contato: {
+      color: 'white',
+      fontSize: 15,
+      fontWeight: 'bold',
+      letterSpacing: 5,
+    }
+
 });
