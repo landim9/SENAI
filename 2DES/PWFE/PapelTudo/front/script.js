@@ -29,8 +29,8 @@ function preencherTabela() {
                     <td>${cli.descricao}</td>
                     <td>${cli.valor}</td>
                     <td>
-                        <button onclick="del(${cli.id})"> - </button>
-                        <button onclick="edit(this)"> * </button>
+                        <button onclick="del(${cli.id})"><ion-icon name="create-outline" class="icon"></ion-icon></button>
+                        <button onclick="edit(this)" ><ion-icon name="trash-outline" class="icon"></ion-icon></button>
                     </td>
                 </tr>
             `;

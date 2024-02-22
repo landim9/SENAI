@@ -15,7 +15,6 @@
         <h3>Inventário - Papelaria PapelTudo</h3>
             <div class="cadastrar" id="cadastro">
                 <div class="inventcad">
-                    <h2>Cadastrar novo cliente</h2>
                     <form id="criar">
                         <label for="id">ID</label>
                         <input type="number" name="id" placeholder="id" required>
@@ -44,21 +43,17 @@
         </table>
     </main>
     <footer>
-        <h2></h2>
-    </footer>
-    <!-- <div class="modal" id="cadastro">
-        <div class="janela">
-            <h2>Cadastrar novo cliente</h2>
-            <form id="criar">
-                <input type="number" name="id" placeholder="id" required>
-                <input type="text" name="nome" placeholder="nome" required>
-                <input type="text" name="descricao" placeholder="descricao" required>
-                <input type="number" name="valor" placeholder="valor" required>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Cancelar" onclick="cadastro.classList.add('oculto')">
-            </form>
+        <div class="mensage">
+            <label for="mensagem">Mensagem do Sistema</label>
+            <input type="text" class="message" name="mensagem" readonly="true">
         </div>
-    </div> -->
+            
+        <div class="patrimonio">
+            <label for="patrimonio">Patrimonio total</label>
+            <input type="text" class="patrimoni" name="patrimonio" readonly="true">
+        </div>
+    </footer>
+
     <div class="modal oculto" id="msgs">
         <div class="janela">
             <h2 id="errTit"></h2>
@@ -73,5 +68,6 @@
     </div>
 </body>
 <script src="script.js"></script>
-
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

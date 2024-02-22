@@ -35,7 +35,7 @@ const update = (req, res) => {
     let nome = req.body.nome;
     let descricao = req.body.descricao;
     let valor = req.body.valor;
-    let query = `UPDATE clientes SET nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
+    let query = `UPDATE item SET nome = '${nome}', descricao = '${descricao}', valor = '${valor}' WHERE id = ${id}`;
     con.query(query, (err, result) => {
         if (err)
             res.status(400).json(err).end;
@@ -51,7 +51,7 @@ const update = (req, res) => {
 //CRUD - Delete
 const del = (req, res) => {
     let id = req.params.id;
-    con.query(`DELETE FROM Clientes WHERE id = ${id}`, (err, result) => {
+    con.query(`DELETE FROM item WHERE id = ${id}`, (err, result) => {
         if (err)
             res.status(400).json(err).end();
         else {

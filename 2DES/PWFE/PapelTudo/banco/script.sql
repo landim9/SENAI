@@ -10,7 +10,7 @@ CREATE TABLE item(
     valor decimal(10,2) not null
 );
 -- DML Popular a tabela com dados de teste
-INSERT INTO item (id, nome, descricao, valor)VALUES
+INSERT INTO item VALUES
 ('i001','Mesa','Mesa de escritório',100.00),
 ('i002','Computador','Desktop DEL i5, 8GB RAM, SSD 500GB',2200.00),
 ('i003','Cadeira','Cadeira giratória de escritório',500.00),
