@@ -23,6 +23,7 @@ header {
     align-items: center;
     text-align: center;
     color: #000000;
+    padding-top: 15px;
     border: #F38F00 1px solid;
     border-radius: 15px;
     margin: 10px;
@@ -84,6 +85,8 @@ table {
     display: block;
     border-collapse: collapse;
     overflow-y: auto;
+    table-layout: fixed;
+    word-wrap: break-word;
 }
 
 thead {
