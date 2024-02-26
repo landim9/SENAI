@@ -2,18 +2,18 @@
 const express = require("express");
 const router = express.Router();
 
-const Cliente = require("./controllers/cliente");
+const Item = require("./controllers/item");
 
 //Rota de teste
-const teste = (req, res) => {
-    res.json("Back-end, API AAAAA respondendo!");
+const teste = (_req, res) => {
+    res.json("Back-end, API Inventário Papelaria Papeltudo respondendo!");
 }
 
 //Rotas de Saída - Clientes
 router.get("/", teste);
-router.post("/items", Cliente.create);
-router.get("/items", Cliente.read);
-router.put("/items/:id", Cliente.update);
-router.delete("/items/:id", Cliente.del);
+router.post("/api/item", Item.create);
+router.get("/api/item", Item.read);
+router.put("/api/item/:id", Item.update);
+router.delete("/api/item/:id", Item.del);
 
 module.exports = router;

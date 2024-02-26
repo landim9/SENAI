@@ -1,138 +1,100 @@
-//Variáveis e constantes(objetos) globais
-const msgs = document.getElementById('msgs');
-const criar = document.getElementById('criar');
-const dados = document.getElementById('dados');
-const uri = "http://localhost:3000/items";
-const clientes = [];
-const cadastro = document.getElementById('cadastro');
-
-//Obter dados do back-end
-function loadClientes() {
-    fetch(uri)
-        .then(res => res.json())
-        .then(res => {
-            res.forEach(cli => {
-                clientes.push(cli);
-            });
-            clientes.push(...res);
-            preencherTabela();
-        });
-}
-
-//CRUD - Read - Renderizar os dados obtidos em uma tabela
-function preencherTabela() {
-    clientes.forEach(cli => {
-        dados.innerHTML += `
-                <tr>
-                    <td>${cli.id}</td>
-                    <td>${cli.nome}</td>
-                    <td>${cli.descricao}</td>
-                    <td>${cli.valor}</td>
-                    <td>
-                        <button onclick="del(${cli.id})"><ion-icon name="trash-outline" class="icon"></ion-icon></button>
-                        <button onclick="edit(this)" ><ion-icon name="create-outline" class="icon"></ion-icon></button>
-                    </td>
-                </tr>
-            `;
-    });
-}
-
-//CRUD - Create
-criar.addEventListener('submit', e => {
-    e.preventDefault();
-    const data = {
-        nome: criar.nome.value,
-        descricao: criar.descricao.value,
-        valor: criar.valor.value
-    };
-    fetch(uri, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form1')
+    const itemsList = document.getElementById('item-list')
+    const totalValueSpan = document.getElementById('Total')
+    let editingItemId = null
+    const messageDiv = document.getElementById('Mensagem');
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+  
+      const id = document.getElementById('id').value
+      const nome = document.getElementById('nome').value
+      const Descrição = document.getElementById('Descrição').value
+      const Valor = parseFloat(document.getElementById('Valor').value)
+  
+      const item = { id, nome: nome, descricao: Descrição, valor: Valor }
+  
+      if (editingItemId) {
+        updateItem(item)
+        editingItemId = null
+      } else {
+        addItemToList(item)
+      }
+  
+      calculateTotal()
+      form.reset()
+      messageDiv.textContent = 'Item cadastrado com sucesso.'
     })
-        .then(res => res.json())
-        .then(res => {
-            if (res.sqlMessage == undefined) {
-                clientes.push(res);
-                dados.innerHTML = "";
-                preencherTabela();
-                cadastro.classList.add('oculto');
-                criar.reset();
-            } else {
-                cadastro.classList.add('oculto');
-                mensagens(res.sqlMessage, 'Erro ao cadastrar cliente!');
-            }
-        });
-});
-
-//CRUD - Update
-function update(btn) {
-    let linha = btn.parentNode.parentNode;
-    let celulas = linha.cells;
-    let id = celulas[0].innerHTML;
-    let data = {
-        id: celulas[1].innerHTML,
-        nome: celulas[2].innerHTML,
-        descricao: celulas[3].innerHTML,
-        valor: celulas[4].innerHTML
-    };
-    fetch(uri + '/' + id, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-        .then(res => res.json())
-        .then(res => {
-            if (res.sqlMessage == undefined) {
-                celulas[1].removeAttribute('contenteditable');
-                celulas[2].removeAttribute('contenteditable');
-                celulas[3].removeAttribute('contenteditable');
-                btn.innerHTML = '*';
-                btn.setAttribute('onclick', 'edit(this)');
-            } else {
-                mensagens(res.sqlMessage, 'Erro ao atualizar cliente!');
-            }
-        });
-}
-
-//CRUD - Delete
-function del(id) {
-    mensagens('Deseja realmente excluir o cliente id = ' + id + '?', 'Excluir cliente', id);
-}
-
-//Confirma exclusão
-function confirmar(id) {
-    fetch(uri + '/' + id, {
-        method: 'DELETE'
-    })
-        .then(res => res.json())
-        .then(res => {
-            window.location.reload();
-        });
-}
-
-//Tornar as células da linha tabela editáveis
-function edit(btn) {
-    let linha = btn.parentNode.parentNode;
-    let celulas = linha.cells;
-    for (let i = 1; i < celulas.length - 2; i++) {
-        celulas[i].setAttribute('contenteditable', 'true');
+  
+    const addItemToList = item => {
+      const row = document.createElement('tr')
+      row.innerHTML = `
+  
+              <td>${item.id}</td>
+              <td>${item.nome}</td>
+              <td>${item.descricao}</td>
+              <td>R$ ${item.valor.toFixed(2)}</td>
+              <td>
+                  <button class="btn-edit"><ion-icon name="create-outline"></ion-icon></button>
+                  <button class="btn-delete"><ion-icon name="trash-outline"></ion-icon></button>
+              </td>
+  
+          `
+  
+      itemsList.appendChild(row)
+  
+      row.querySelector('.btn-edit').addEventListener('click', () => {
+        document.getElementById('id').value = item.id
+        document.getElementById('nome').value = item.nome
+        document.getElementById('Descrição').value = item.descricao
+        document.getElementById('Valor').value = item.valor
+  
+        editingItemId = item.id
+      })
+  
+      row.querySelector('.btn-delete').addEventListener('click', () => {
+        row.remove()
+        calculateTotal()
+      })
     }
-    btn.innerHTML = '✔';
-    btn.setAttribute('onclick', 'update(this)');
-}
-
-//Mostrar mensagens do sistema em um modal
-function mensagens(msg, titulo, confirma) {
-    msgs.classList.remove('oculto');
-    document.querySelector('#errTit').innerHTML = titulo;
-    document.querySelector('#msg').innerHTML = msg;
-    if (confirma != undefined) {
-        document.querySelector('#confirma').classList.remove('oculto');
-        document.querySelector('#confirma').setAttribute("onclick", `confirmar(${confirma})`);
+  
+    const updateItem = item => {
+      // Percorre todas as linhas da tabela
+      itemsList.querySelectorAll('tr').forEach(row => {
+        // Obtém o ID do item na linha atual
+        const itemId = row.cells[0].textContent
+        if (itemId === item.id) {
+          // Verifica se o ID corresponde ao ID do item sendo editado
+          // Atualiza os campos da linha com os novos valores do item
+          row.cells[1].textContent = item.nome
+          row.cells[2].textContent = item.descricao
+          row.cells[3].textContent = `R$ ${item.valor.toFixed(2)}`
+        }
+      })
     }
-}
+  
+    const calculateTotal = () => {
+      let total = 0;
+    
+      itemsList.querySelectorAll('tr').forEach(row => {
+        const value = parseFloat(row.cells[3].textContent.replace('R$', ''));
+        total += value;
+      });
+    
+      totalValueSpan.textContent = `R$ ${total.toFixed(2)}`;
+    }
+    
+    const loadItem = () => {
+      fetch('http://localhost:3000/api/item')
+        .then(response => response.json())
+        .then(item => {
+          item.forEach(item => addItemToList(item))
+          calculateTotal()
+        })
+  
+        .catch(error => console.error('Erro ao carregar itens:', error))
+    }
+  
+    loadItem()
+  })
