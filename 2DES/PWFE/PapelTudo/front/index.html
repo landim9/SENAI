@@ -52,18 +52,37 @@
 
           <tbody id="item-list"></tbody>
         </table>
-      </section>      
+      </section>
     </main>
 
-    <footer><div class="mensagem">
+    <footer>
+      <div class="mensagem">
         <label for="Mensagem">Mensagem do Sistema:</label>
 
-        <input type="text" id="Mensagem" name="Mensagem" required />
+        <input
+          type="text"
+          id="Mensagem"
+          name="Mensagem"
+          required
+          readonly="true"
+        />
+      </div>
 
+      <div class="patrimonio">
         <p>Patrimônio Total: <span id="Total"> R$ 0.00</span></p>
-      </div></footer>
-
+      </div>
+        
+      </div>
+    </footer>
 
     <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

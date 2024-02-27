@@ -46,13 +46,13 @@ footer {
     height: 15vh;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    align-items: center;
+    padding: 20px ;
     text-align: center;
     color: #000000;
     border:#F38F00 2px solid;
     border-radius: 15px;
     margin: 10px;
-
 }
 
 nav {
@@ -229,7 +229,7 @@ label {
 .mensagem {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 8vh;
     color: #000;
     font-family: "Courier Prime", monospace;
@@ -245,19 +245,18 @@ label {
     margin-top: 10px;
 }
 
-.mensagem .Mensagem {
+/* .mensagem .Mensagem {
     border-radius: 10px;
     border: 2px solid #f38f00;
     line-height:25px;
-}
+} */
  
-.mensagem p span {
-    border-radius: 10px;
+.patrimonio p span {
+    border-radius: 5px;
     display: inline-block;
     padding: 0 40px;
     font-weight: bold;
     line-height:25px;
-    transition: all .3s ease;
     border: 2px solid #f38f00;
     background-color: #f9f9f9;
     color: #7f0000;
@@ -265,6 +264,5 @@ label {
 }
 
 ion-icon {
-    font-size: 30px;
-    color: #f38f00;
+    font-size: 20px;
 }
