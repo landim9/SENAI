@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ScreenIMC from 'components/FormIMC';
-import LoginForm from 'components/loginForm';
+import ScreenIMC from '/rscomponents/FormIMC';
+import LoginForm from './components/loginForm';
 
 
 const Stack = createNativeStackNavigator();
