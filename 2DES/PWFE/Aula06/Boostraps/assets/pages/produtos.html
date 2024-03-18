@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="shortcut icon" href="../img/Logo.png" type="image/x-icon">
+    <title>Language Hub - Cursos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logo-search">
+            <a href="../../index.html">
+                <div class="logo">
+                    <h1>Language Hub</h1>
+                </div>
+            </a>
+
+
+        </div>
+
+
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="cursos.html"></a></li>
+                <li><a onclick="openDialog()">Contato</a></li>
+                <li><button><a href="../pages/addproduto.html"></a>Matricule-se</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dialog contactDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('contact')"></i>
+            <h1>Contato</h1>
+            <form>
+                <div>
+                    <label>Nome</label>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+
+                <div>
+                    <label>Mensagem</label>
+                    <textarea placeholder="Mensagem" rows="5" cols="30" required></textarea>
+                </div>
+                <button class="sharp-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <div class="courses-container" data-aos="fade-down">
+            <div class="course">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country">
+                        <img src="../img/estados-unidos-icone-1.png" alt="">
+                    </div>
+                    <h2>Inglês</h2>
+                </div>
+                <p>Ao estudar no curso de inglês da Language Hub, você desenvolve 4 habilidades na língua inglesa. São
+                    aulas de inglês do básico ao avançado e fluência para crianças, adolescentes e adultos.</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="course" data-aos="fade-down">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country"">
+                        <img src=" ../img/espanha-removebg-preview.png" alt="">
+                    </div>
+                    <h2>Espanhol</h2>
+                </div>
+
+                <p>No curso de espanhol da Language Hub, você irá aprender a se comunicar com vários países que têm a
+                    língua espanhola como língua materna.</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="course" data-aos="fade-down">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country">
+                        <img src="../img/frenc.jpg" alt="">
+                    </div>
+
+                    <h2>Francês</h2>
+                </div>
+                <p>Aprenda a falar francês e a desenvolver suas habilidades de escuta, escrita e leitura na língua
+                    francesa com a metodologia exclusiva Language Hub.</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="course" data-aos="fade-down">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country">
+                        <img src="../img/italia.webp" alt="">
+                    </div>
+                    <h2>Italiano</h2>
+                </div>
+
+                <p>A Language Hub oferece a oportunidade de aprender italiano, com metodo exclusivo que auxiliar você a
+                    conquistar e fluência!</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="course" data-aos="fade-down">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country">
+                        <img src="../img/2427642765b56943b59.webp" alt="">
+                    </div>
+                    <h2>Chinês</h2>
+                </div>
+                <p>O curso de chinês da Language Hub utiliza métodos que facilitam o aprendizado do idioma, para ajudar
+                    você a alcançar a proficiência!</p>
+                <button>Saiba mais</button>
+            </div>
+
+            <div class="course" data-aos="fade-down">
+                <div class="course-bg"></div>
+                <div class="course-title">
+                    <div class="img-country">
+                        <img src="../img/bandeira-redonda-do-japao-ilustracao-do-vetor_739746-116.avif" alt="">
+                    </div>
+                    <h2>Japonês</h2>
+                </div>
+
+                <p>Ao estudar japonês com o material e as aulas da Language Hub, você aprende a falar, ouvir, ler e
+                    escrever no idioma para alcançar a fluência na língua.</p>
+                <button>Saiba mais</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="logo">
+                <h1>Language Hub</h1>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2022-2024 Language Hub. Todos os direitos reservados.</p>
+            </div>
+
+            <div class="social">
+                <p>Siga-nos em nossas redes</p>
+
+                <div class="social-icons">
+                    <div class="instagram">
+                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+
+                    <div class="github">
+                        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                    </div>
+
+                </div>
+            </div>
+    </footer>
+</body>
+<script src="../script/main.js"></script>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-search">
+            <a href="index.html">
+                <div class="logo">
+                    <h1>Language Hub</h1>
+                </div>
+            </a>
+
+        </div>
+        
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="assets/pages/produtos.html">Produtos</a></li>
+                <li><a onclick="openDialog('contact')">Contato</a></li>
+                <li><button class="sharp-button" onclick="openDialog('matricula')">Matricule-se</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dialog contactDialog hidden">
+        <div class="dialog-content">
+            <i class="bi bi-x-lg exit-dialog" onclick="closeDialog('contact')"></i>
+            <h1>Contato</h1>
+            <form>
+                <div>
+                    <label>Nome</label>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+                
+                <div>
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" required>
+                </div>
+
+                <div>
+                    <label>Assunto</label>
+                    <input type="text" placeholder="Assunto" required>
+                </div>
+
+                <div>
+                    <label>Mensagem</label>
+                    <textarea placeholder="Mensagem" rows="5" cols="30" required></textarea>
+                </div>
+                <button class="sharp-button">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="first">
+
+            <div class="first-seen" data-aos="fade-up">
+   
+            </div>
+            
+           
+
+        </section>
+
+        <section class="second">
+            <div>
+
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © 2022-2024 Language Hub. Todos os direitos reservados.</p>
+            </div>
+
+            <div class="social">
+                <p>Siga-nos em nossas redes</p>
+
+                <div class="social-icons">
+                    <div class="instagram">
+                        <a href="#" target="_blank"><i class="bi bi-instagram"></i></a>
+                    </div>
+    
+                    <div class="github">
+                        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+        </div>
+    </footer>
+
+    
+</body>
+<script src="assets/script/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.2/cdn.js"></script>
+</html>
