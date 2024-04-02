@@ -1,0 +1,44 @@
+// Normalização
+
++------------------+        +----------------+        +------------------+         +--------------+
+|     Veículo      |        |     Cliente    |        |     Reserva      |         |    Aluguel   |
++------------------+        +----------------+        +------------------+         +--------------+
+| placa (PK)       |        | cpf_cliente    |        | placa (PK, FK)   |         | placa (PK, FK)|
+| modelo           |        | nome_cliente   |        | cpf_cliente (FK) |         | cpf_cliente(FK)|
+| marca            |        | telefone       |        | reserva          |         | retirada      |
+| tipo             |        +----------------+        | retirada         |         | devolucao     |
+| diaria           |                                 | devolucao        |         | dias          |
+| reserva          |                                 | dias             |         | status        |
+| retirada         |                                 | status           |         | subtotal      |
+| devolucao        |                                 +------------------+         +--------------+
+| dias             |
+| status           |
+| subtotal         |
++------------------+
+
+
+// Tabela Veiculo
++------------------------------------------------+
+placa   | modelo   | marca | tipo       | diaria |
+--------|----------|-------|------------|--------|
+DEA-7981| Uno      | Fiat  | standart   | 100.00 | 
+CBC-4945| Fiorino  | Fiat  | utilitario | 120.00 |   
+BEE-7735| Saveiro  | VW    | standart   | 100.00 | 
+CBA-4403| Sandeiro | Renaut| standart   | 100.00 |
+BBC-8504| Palio    | Fiat  | standart   | 100.00 | 
+EDB-2475| Ranger   | Ford  | esportivo  | 200.00 |
+
+
+//Tabela Cliente
+cpf_cliente     | nome_cliente       | telefone
+----------------|--------------------|----------------------
+111.111.111-11  | Osvaldo Oliveira  | 19-72077-0521,19-06078-6843
+222.222.222-22  | Jaqueline Teixeira| 19-23003-4864
+333.333.333-33  | Keli Matos         | 19-06486-6449,19-53266-7923
+444.444.444-44  | Ursula Souza       | 19-64378-2404
+555.555.555-55  | Evandro Silva      | 19-53315-2734
+
+//Tabela Aluguel
+placa   | cpf_cliente     | retirada   | devolucao | dias | status | subtotal
+--------|-----------------|------------|-----------|------|--------|----------
+CBC-4945| 222.222.222-22 | 14/03/2024 |           | 19   | alugado| 2,280.00
