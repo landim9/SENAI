@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="introducao">
+        <img src="" alt="">
+        <div class="placar">
+            <h2 class="score">Pontos</h2>
+            <p class="pontuacao">0</p>
+        </div>
+    </header>
+
+    <main class="jogo">
+        <img src="" alt="">
+        <div class="container container-papel" onclick="jogar(papel)">
+            <button class="papel opcao" value="papel">PAPEL</button>
+        </div>
+
+        <div class="container container-tesoura" onclick="jogar(tesoura)">
+            <button class="tesoura opcao" value="tesoura">Tesoura</button>
+        </div>
+
+        <div class="container container-pedra" onclick="jogar(pedra)">
+            <button class="pedra opcao" value="pedra">PEDRA</button>
+        </div>
+    </main>
+    
+    <div class="regra">
+        <div class="regra-titulo">
+            <h1>Regras</h1>
+            <button onclick="fecharRegras()">&CloseCurlyQuote;</button>
+        </div>
+    </div>
+
+    <div class="gameplay">
+        <div class="player display">
+            <H2 class="persona">Você escolheu</H2>
+            <p class="test"></p>
+            <h2 class="persona1">Você escolheu</h2>
+        </div>
+    </div>
+
+    <div class="fim">
+        <p class="result"></p>
+        <button class="playAgain" onclick="reset()">Jogar Novamente</button>
+    </div>
+    
+    <div class="house display">
+        <h2 class="persona">O Computador Escolheu</h2>
+        <p class="test1"></p>
+        <h2 class="persona1">O Computador Escolheu</h2>
+    </div>
+
+    <button class="regras-button">
+
+    </button>
+
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+</body>
+<script src=""></script>
+</html>
