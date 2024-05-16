@@ -1,0 +1,56 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// Definição da tabela Destinos
+model Destino {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  valor     Float
+  data      DateTime
+  
+  // Relacionamento com PontosTuristicos
+  pontosTuristicos PontoTuristico[]
+}
+
+// Definição da tabela PontosTuristicos
+model PontoTuristico {
+  id        Int      @id @default(autoincrement())
+  nome      String  @db.VarChar(255)
+  endereco  String
+  telefone  String  @db.VarChar(13)
+  valor     Float
+  
+  // Relacionamento com Destinos
+  destino   Destino   @relation(fields: [destinoId], references: [id])
+  destinoId Int
+}
+
+// Definição da tabela Hoteis
+model Hotel {
+  id         Int      @id @default(autoincrement())
+  nome       String @db.VarChar(255)
+  valor      Float
+  avaliacao  Float
+  email      String @db.VarChar(255)
+  site       String
+}
+
+
+model User {
+  id       Int      @id @default(autoincrement())
+  username String   @unique
+  password String
+}
+
