@@ -1,38 +1,99 @@
 export default [
     {
-        question: "Quanto é 1 + 2?",
+        question: "Qual seleção venceu a Copa do Mundo de 2018?",
         answers: [
-            {option: "3", correct:true},
-            {option: "4", correct:false},
-            {option: "5", correct:false},
+            {option: "Argentina", correct:false},
+            {option: "Brasil", correct:false},
+            {option: "França", correct:true},
         ],
     },
 
     {
-        question: "Quanto é 5 x 2?",
+        question: "Qual jogador tem o recorde de mais gols marcados na história da Copa do Mundo?",
         answers: [
-            {option: "9", correct:false},
-            {option: "10", correct:true},
-            {option: "11", correct:false},
+            {option: "Miroslav Klose", correct:true},
+            {option: "Pelé", correct:false},
+            {option: "Cristiano Ronaldo", correct:false},
         ],
     },
     
     {
-        question: "Quanto é 10 x 8?",
+        question: "Em que país nasceu o futebol moderno?",
         answers: [
-            {option: "800", correct:false},
-            {option: "60", correct:false},
-            {option: "80", correct:true},
+            {option: "Brasil", correct:false},
+            {option: "Inglaterra", correct:true},
+            {option: "Itália", correct:false},
         ],
         
     },
 
     {
-        question: "Quanto é 7 x 7?",
+        question: "Qual clube ganhou a UEFA Champions League mais vezes?",
         answers: [
-            {option: "49", correct:true},
-            {option: "50", correct:false},
-            {option: "51", correct:false},
+            {option: "Barcelona", correct:false},
+            {option: "Real Madrid", correct:true},
+            {option: "Bayern de Munique", correct:false},
+        ],
+        
+    },
+    
+    {
+        question: "Quem ganhou a Bola de Ouro FIFA em 2020?",
+        answers: [
+            {option: "Lionel Messi", correct:false},
+            {option: "Cristiano Ronaldo", correct:false},
+            {option: "Robert Lewandowski", correct:true},
+
+        ],
+        
+    },
+
+    {
+        question: "Qual país venceu a Copa do Mundo de 2014?",
+        answers: [
+            {option: "Alemanha", correct:true},
+            {option: "Espanha", correct:false},
+            {option: "Argentina", correct:false},
+        ],
+        
+    },
+
+    {
+        question: "Qual é o nome do estádio do Barcelona?",
+        answers: [
+            {option: "Santiago Bernabéu", correct:false},
+            {option: "Camp Nou", correct:true},
+            {option: "Anfield", correct:false},
+        ],
+        
+    },
+
+    {
+        question: "Qual jogador é conhecido como 'O Fenômeno'?",
+        answers: [
+            {option: "Ronaldo Nazário", correct:true},
+            {option: "Ronaldinho Gaúcho", correct:false},
+            {option: "Neymar", correct:false},
+        ],
+        
+    },
+
+    {
+        question: "Quem é o técnico da seleção brasileira de futebol masculino?",
+        answers: [
+            {option: "Dorival Jr", correct:true},
+            {option: "Tite", correct:false},
+            {option: "Fernando Diniz", correct:false},
+        ],
+        
+    },
+
+    {
+        question: "Qual clube ganhou mais títulos da Premier League inglesa?",
+        answers: [
+            {option: "Manchester United", correct:true},
+            {option: "Manchester City", correct:false},
+            {option: "Chelsea", correct:false},
         ],
         
     },
